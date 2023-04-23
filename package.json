@@ -1,0 +1,25 @@
+{
+  "name": "changeip",
+  "version": "1.0.0",
+  "description": "project change ip",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfatihrabbani/change-ip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfatihrabbani/change-ip/issues"
+  },
+  "homepage": "https://github.com/mfatihrabbani/change-ip#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-powershell": "^5.0.1"
+  }
+}
