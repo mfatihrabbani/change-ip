@@ -6,6 +6,7 @@ export const changeIpController = async (req, res, next) => {
         const message = await changeIp(ip)
         res.status(200).json({status: "Success", message: message})
     }catch(error){
+        console.log(error)
         return next(error)
     }
 }
