@@ -58,7 +58,7 @@ const changeConfig = (fileName) => {
     })
 }
 
-const getAllFileConfig = async () => {
+export const getAllFileConfig = async () => {
     const files = await fs.promises.readdir("C:\\Program Files\\WireGuard\\Data\\Configurations")
     const fileNames = []
 
@@ -67,6 +67,9 @@ const getAllFileConfig = async () => {
             let newFile = file.replace(".conf.dpapi", "")
             fileNames.push(newFile)
         }
+    }
+    if(fileNames.length == 0){
+        validationError("No config in directory")
     }
     return fileNames
 }
@@ -79,5 +82,3 @@ export const changeIp = async (fileName) => {
     const change = await changeConfig(fileName)
     return change
 }
-
-getAllFileConfig()

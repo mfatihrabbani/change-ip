@@ -1,10 +1,11 @@
 import express from "express"
-import { changeIpController } from "./controllers/ipController.js"
+import { changeIpController, getAllFileConfigController } from "./controllers/ipController.js"
 
 const app = express()
 app.use(express.json())
 
 app.get("/change/:ip", changeIpController)
+app.get("/config", getAllFileConfigController)
 
 app.use("/", (err, req, res, next) => {
     if(err){

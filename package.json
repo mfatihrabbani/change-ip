@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "test",
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "startDev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
