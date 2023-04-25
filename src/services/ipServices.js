@@ -61,7 +61,13 @@ export const changeIp = async (fileName) => {
     if (fileName == null){
         validationError("Parameter cannot null")
     }
-    const shutdown = await shutdownCurrentConfig(fileName)
-    const change = await changeConfig(fileName)
-    return change
+    await exec(`Start-Process -Verb RunAs powershell.exe -Args '-ExecutionPolicy Bypass -command wireguard /installtunnelservice \\""C:\\Program Files\\WireGuard\\Data\\Configurations\\${fileName}.conf.dpapi"\"'`, {'shell':'powershell.exe'},(error, stdout, stderr) => {
+        if (error == null){
+            console.log("Success change IP")
+            return 'Success change IP'
+        }
+        console.log(stderr)
+        console.log("Failed change IP")
+        throw validationError("Failed to change IP")
+    })
 }
