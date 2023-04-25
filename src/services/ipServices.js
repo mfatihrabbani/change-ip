@@ -3,7 +3,7 @@ import { validationError } from "../utils/validation.js"
 
 const shutdownCurrentConfig = (fileName) => {
     return new Promise((resolve, reject) => {
-        exec(`Start-Process -Verb RunAs powershell.exe -Args '-ExecutionPolicy Bypass -command wg show'`,{'shell':'powershell.exe'} ,(error, stdout, stderr) => {
+        exec(`wg show` ,(error, stdout, stderr) => {
             if(error){
                 console.error(stderr)
                 reject(new Error("Failed to shutdown current config"))
