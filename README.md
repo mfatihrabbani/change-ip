@@ -43,7 +43,7 @@ const changeConfig = (fileName) => {
 
 Berikut adalah dokumentasi API
 
-## Change IP 
+## Change Conig 
 Request:
  - Method : "GET"
  - Endpoint : "/change/:config"
@@ -57,6 +57,24 @@ Response
 {
     "status": "Success",
     "message": "Success change IP"
+}
+```
+
+## Get All Config 
+Request:
+ - Method : "GET"
+ - Endpoint : "/config"
+ - Headers :
+    - Accept : application/json
+
+Response
+```json
+{
+    "status": "Success",
+    "message": "Success Success get config IP",
+    "data": [
+        "nameFile"
+    ]
 }
 ```
 
