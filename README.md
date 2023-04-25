@@ -1,4 +1,4 @@
-# Dokumentasi Auto Change IP Wireguard
+# Dokumentasi Instalasi Auto Change Config Wireguard
 
 ## Prerequisite
 
@@ -38,6 +38,27 @@ const changeConfig = (fileName) => {
 \\""C:\\Program Files\\WireGuard\\Data\\Configurations\\${fileName}.conf.dpapi"\"'
 ```
 - Setelah itu save dan jalan kan kembali aplikasi Node js nya menggukan `npm start`
+
+# Dokumentasi API
+
+Berikut adalah dokumentasi API
+
+## Change IP 
+Request:
+ - Method : "GET"
+ - Endpoint : "/change/:config"
+ - Parameter : 
+    - config : "nama config wireguard"
+ - Headers :
+    - Accept : application/json
+
+Response
+```json
+{
+    "status": "Success",
+    "message": "Success change IP"
+}
+```
 
 
 
