@@ -63,6 +63,5 @@ export const changeIp = async (fileName) => {
     }
     const shutdown = await shutdownCurrentConfig(fileName)
     const change = await changeConfig(fileName)
-    console.log(change)
     return change
 }
