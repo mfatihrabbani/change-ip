@@ -71,7 +71,7 @@ Response
 ```json
 {
     "status": "Success",
-    "message": "Success Success get config IP",
+    "message": "Success get config IP",
     "data": [
         "nameFile"
     ]
