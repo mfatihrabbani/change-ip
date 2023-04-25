@@ -1,5 +1,6 @@
 import {exec} from "child_process"
 import { validationError } from "../utils/validation.js"
+import fs from "fs"
 
 const shutdownCurrentConfig = (fileName) => {
     return new Promise((resolve, reject) => {
@@ -57,6 +58,19 @@ const changeConfig = (fileName) => {
     })
 }
 
+const getAllFileConfig = async () => {
+    const files = await fs.promises.readdir("C:\\Program Files\\WireGuard\\Data\\Configurations")
+    const fileNames = []
+
+    for (let file of files){
+        if(file.includes("conf.dpapi")){
+            let newFile = file.replace(".conf.dpapi", "")
+            fileNames.push(newFile)
+        }
+    }
+    return fileNames
+}
+
 export const changeIp = async (fileName) => {
     if (fileName == null){
         validationError("Parameter cannot null")
@@ -65,3 +79,5 @@ export const changeIp = async (fileName) => {
     const change = await changeConfig(fileName)
     return change
 }
+
+getAllFileConfig()
