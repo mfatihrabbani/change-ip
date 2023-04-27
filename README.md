@@ -43,7 +43,7 @@ const changeConfig = (fileName) => {
 
 Berikut adalah dokumentasi API
 
-## Change Conig 
+## Change Config 
 Request:
  - Method : "GET"
  - Endpoint : "/change/:config"
