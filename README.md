@@ -14,30 +14,16 @@
 - Jalankan proyek dengan perintah `npm start`.
 
 ## Langkah Langkah Set Lokasi File Wireguard
-- Buka file `./src/services/ipServices.js`
-- Kemudian cari bagian
-```javascript
-const changeConfig = (fileName) => {
-    return new Promise((resolve, reject) => {
-        exec(`Start-Process -Verb RunAs powershell.exe -Args '-ExecutionPolicy Bypass -command wireguard /installtunnelservice \\""C:\\Program Files\\WireGuard\\Data\\Configurations\\${fileName}.conf.dpapi"\"'`, {'shell':'powershell.exe'},(error, stdout, stderr) => {
-            console.log(`Running config ${fileName}`)
-            if (error){
-                console.log(stderr)
-                console.log("Failed change IP")
-                reject(new Error("Failed to change IP"))
-                return
-            }
-            console.log("Success change IP")
-            return resolve('Success change IP') 
-        })
-    })
-}
+- Buka file `.env`
+- Kemudian isi untuk keperluan environment (jika tidak ada buat terlebih dahulu)
 ```
-- Nah pada bagian ini ganti sesuai dengan lokasi direktori wireguard di install (jangan menghapus \\ karena itu format dari cara penulisan powershell)
+PORT=3000
+PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
 ```
-\\""C:\\Program Files\\WireGuard\\Data\\Configurations\\${fileName}.conf.dpapi"\"'
-```
-- Setelah itu save dan jalan kan kembali aplikasi Node js nya menggukan `npm start`
+- Isi file `.env` dengan ketentuang di atas
+- Kemudian isi `PATHWIREUARD` sesuai dengan lokasi aplikasi wireguard di pc
+- Kemudian save
+- Lalu jalankan aplikasi menggunakan perintah `npm start`
 
 # Dokumentasi API
 

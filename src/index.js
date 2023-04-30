@@ -15,6 +15,6 @@ app.use("/", (err, req, res, next) => {
     }
 })
 
-app.listen(environtment.server.port, () => {
-    console.log(`Server run on port ${environtment.server.port}`)
+app.listen(environtment.server.port || 3000, () => {
+    console.log(`Server run on port ${environtment.server.port || 3000}`)
 })
