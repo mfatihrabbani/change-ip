@@ -45,7 +45,7 @@ const shutdownCurrentConfig = (fileName) => {
 
 const changeConfig = (fileName) => {
     return new Promise((resolve, reject) => {
-        exec(`Start-Process -Verb RunAs powershell.exe -Args '-ExecutionPolicy Bypass -command wireguard /installtunnelservice \\""C:\\Program Files\\WireGuard\\Data\\Configurations\\${fileName}.conf.dpapi"\"'`, {'shell':'powershell.exe'},(error, stdout, stderr) => {
+        exec(`Start-Process -Verb RunAs powershell.exe -Args '-ExecutionPolicy Bypass -command wireguard /installtunnelservice \\""${environtment.path.wireguard}\\${fileName}.conf.dpapi"\"'`, {'shell':'powershell.exe'},(error, stdout, stderr) => {
             console.log(`Running config ${fileName}`)
             if (error){
                 console.log(stderr)
@@ -60,7 +60,7 @@ const changeConfig = (fileName) => {
 }
 
 export const getAllFileConfig = async () => {
-    const files = await fs.promises.readdir(environtment.path.wireguard)
+    const files = await fs.promises.readdir(environtment.path.wi)
     const fileNames = []
 
     for (let file of files){
