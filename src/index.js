@@ -1,5 +1,6 @@
 import express from "express"
 import { changeIpController, getAllFileConfigController } from "./controllers/ipController.js"
+import environtment from "./environtment.js"
 
 const app = express()
 app.use(express.json())
@@ -14,6 +15,6 @@ app.use("/", (err, req, res, next) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log("Server change IP ON")
+app.listen(environtment.server.port, () => {
+    console.log(`Server run on port ${environtment.server.port}`)
 })

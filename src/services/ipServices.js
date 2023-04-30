@@ -1,6 +1,7 @@
 import {exec} from "child_process"
 import { validationError } from "../utils/validation.js"
 import fs from "fs"
+import environtment from "../environtment.js"
 
 const shutdownCurrentConfig = (fileName) => {
     return new Promise((resolve, reject) => {
@@ -59,7 +60,7 @@ const changeConfig = (fileName) => {
 }
 
 export const getAllFileConfig = async () => {
-    const files = await fs.promises.readdir("C:\\Program Files\\WireGuard\\Data\\Configurations")
+    const files = await fs.promises.readdir(environtment.path.wireguard)
     const fileNames = []
 
     for (let file of files){
