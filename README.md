@@ -21,7 +21,7 @@ PORT=3000
 PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
 ```
 - Isi file `.env` dengan ketentuang di atas
-- Kemudian isi `PATHWIREUARD` sesuai dengan lokasi aplikasi wireguard di pc
+- Kemudian isi `PATHWIREUARD` sesuai dengan lokasi aplikasi wireguard di pc (penulisan path berdasarkan contoh di atas)
 - Kemudian save
 - Lalu jalankan aplikasi menggunakan perintah `npm start`
 
@@ -29,7 +29,7 @@ PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
 
 Berikut adalah dokumentasi API
 
-## Change Config 
+## Change Config
 Request:
  - Method : "GET"
  - Endpoint : "/change/:config"
