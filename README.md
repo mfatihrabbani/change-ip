@@ -21,7 +21,7 @@
 PORT=3000
 PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
 ```
-- Isi file `.env` dengan ketentuang di atas
+- Isi file `.env` dengan ketentuan di atas
 - Kemudian isi `PATHWIREUARD` sesuai dengan lokasi aplikasi wireguard di pc (penulisan path berdasarkan contoh di atas)
 - Kemudian save
 - Lalu jalankan aplikasi menggunakan perintah `npm start`
