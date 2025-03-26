@@ -23,7 +23,7 @@ PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
 ```
 - Isi file `.env` dengan ketentuan di atas
 - Kemudian isi `PATHWIREUARD` sesuai dengan lokasi aplikasi wireguard di pc (penulisan path berdasarkan contoh di atas)
-- Kemudian save
+- Kemudian save file `.env`
 - Lalu jalankan aplikasi menggunakan perintah `npm start`
 
 # Dokumentasi API
