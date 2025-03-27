@@ -1,4 +1,4 @@
-# Dokumentasi Instalasi Auto Change Config Wireguard Via Api
+# Dokumentasi Instalasi Auto Change Config Wireguard Via REST Api
 
 ## Prerequisitea
 
