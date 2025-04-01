@@ -1,6 +1,6 @@
 # Dokumentasi Instalasi Auto Change Config Wireguard Via REST Api
 
-## Prerequisitea
+## Prerequisite
 
 - Node Js versi 18
 - Wireguard
