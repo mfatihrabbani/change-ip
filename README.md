@@ -16,7 +16,7 @@
 
 ## Langkah Langkah Set Lokasi File Wireguard
 - Buka file `.env`
-- Kemudian isi untuk keperluan environment (jika tidak ada buat terlebih dahulu)
+- Kemudian isi untuk keperluan environment (jika tidak ada buat terlebih dahulu). 
 ```
 PORT=3000
 PATHWIREGUARD=C:\\Program Files\\WireGuard\\Data\\Configurations
