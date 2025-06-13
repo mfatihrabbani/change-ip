@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-- Node Js versi 18
+- Node JS versi 18
 - Wireguard
 
 ## Langkah Langkah Instalasi
